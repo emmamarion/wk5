@@ -1,0 +1,25 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    padding: 20px;
+    border: solid 10px blue;
+    background-color: rgb(130, 130, 130);
+    display: block;
+    margin: auto;
+}
+
+.picture1 {
+    width: 300px;
+    margin-bottom: 30px;
+    
+}
+
+.picture2 {
+    width: 300px;
+}
