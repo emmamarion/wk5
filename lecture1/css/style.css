@@ -1,0 +1,90 @@
+  section{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: lightgray;
+  }
+
+  /* Character card styling */
+  .grid div {
+    background: #f2f2f2;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid blue;
+  }
+  
+  /* Images */
+  .grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+  }
+
+  .gallery img {
+    border: 3px yellow dashed;
+    border-radius: 50px;
+
+  }
+  
+  /* Headings */
+  .character h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+  }
+    
+  .grid dt {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .grid dd {
+    margin: 0;
+    color: #555;
+  }
+  
+
+  /* **** Student code starts here */
+  
+  dl {
+   display: grid;
+   grid-template-columns: auto auto;
+   gap: 5px;
+   justify-items: left;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .grid div:nth-child(even) img{
+    width: 50;
+    filter: grayscale(100%);
+    border: solid black 25px;
+    box-sizing: border-box;
+  }
+
+  .gallery {
+    display: flexbox;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+  }
+
+.gallery img:hover,
+.gallery img:focus-within {
+  scale: 100%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  animation-name: Gallery;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Gallery{
+  from  {scale: 100%;}
+  to {scale: 105%;}
+}
