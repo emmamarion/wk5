@@ -17,3 +17,99 @@
 }
 
 /* STUDENT CODE STARTS HERE */
+/* Tablet view (=>768px) */
+@media (min-width: 768px) {
+  .grid { 
+    grid-template-columns: 45% 45%;
+    gap: 10px;
+    justify-items: center;
+  }
+  .grid > div:nth-child(3n) {
+    grid-column: 1/-1;
+    width: 50%;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+    
+  }
+
+  .gallery img {
+    flex: 1 1 30%;
+  }
+
+  .grid > div:nth-child(even) {
+    background-color: yellow;
+    border: none;
+    filter: none;
+  }
+}
+
+
+/* Desktop view (1200px) */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+  }
+
+  /* .grid > div:nth-child(3n) {
+    grid-column: auto;
+    width: inherit;
+  } */
+
+  .gallery {
+    justify-content: space-between;
+  }
+
+  .gallery img {
+    flex: 1 1 200px;
+  }
+
+  .grid > div:hover {
+    box-shadow: 0px 0px 15px black;
+  }
+/* Print View */
+  @media print {
+    body {
+      background-color: white;
+      color: black;
+    }
+
+    .gallery {
+      display: none;
+    }
+    
+    .grid {
+      grid-template-columns: auto;
+    }
+
+
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .gallery img:hover,
+  .grid > div:hover {
+    transform: none;
+    box-shadow: none;
+    animation-play-state: paused;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+  }
+  .grid body {
+    background-color: #111;
+    color: #eee;
+  }
+  .grid div {
+    background-color: #111;
+    border: 1px solid #EB5B00;
+  }
+}
